@@ -1,62 +1,32 @@
-# WhatsApp Client Library for .NET Developer
+# WhatsApp Client Library for .NET Developers
 
-WhatsApp NET Client adalah library gratis untuk .NET Developer yang digunakan untuk mengembangkan aplikasi WhatsApp klien berbasis desktop. Library ini dikembangkan di atas teknologi .NET dengan menggunakan bahasa pemrograman C#, sehingga bisa juga digunakan untuk semua bahasa pemrograman .NET selain C# seperti VB.NET, F#, C++ dan bahasa .NET lainnya.
+WhatsApp NET Client is a free library for .NET Developers used to develop desktop-based WhatsApp client applications. This library was developed on top of .NET technology using the C# programming language, so it can also be used for all .NET programming languages other than C# such as VB.NET, F#, C++ and other .NET languages.
 
-Dalam pengembangannya WhatsApp NET Client menggunakan [Baileys - WhatsApp Web API ](https://github.com/adiwajshing/Baileys/) sebagai engine/library untuk berkomunikasi secara langsung dengan WhatsApp server dengan menggunakan websocket.
+In its development WhatsApp NET Client uses [Baileys - WhatsApp Web API ](https://github.com/adiwajshing/Baileys/) as engine/library to communicate directly with WhatsApp server using websocket.
 
-## Info Rilis dan Petunjuk Instalasi
+## Release Info and Installation Instructions
 
-Bisa Anda cek di http://wa-net.coding4ever.net/
+You can check at http://wa-net.coding4ever.net/
 
-## Persyaratan Sistem
+## System Requirements
 
-* Windows 8, 10 dan windows versi terbaru
-* .NET Framework 4.5 dan .NET versi terbaru
-* Node.js versi 14.16.x atau versi terbaru
+* Windows 8, 10 and latest versions of windows
+* .NET Framework 4.5 and latest version of .NET
+* Node.js version 14.16.x or later
 * [Software git](https://git-scm.com/downloads) (version control)
 
-## Fitur
+## Feature
 
-| Feature                                                                                                                                                                                                                                                                                                                   | Status |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------:|
-| Headless/no window                                                                                                                                                                                                                                                                                                        |    ✅   |
-| Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)                                                                                                                                                                                                                                                 |    ✅   |
-| Mendukung penggunaan [multi account WA](https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount), untuk contohnya bisa Anda lihat di [https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount](https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount)                                  |    ✅   |
-| Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database                                                                                                                                                                                                                                         |    ✅   |
-| Grab groups dan members untuk membaca data group beserta anggotanya sehingga hasilnya juga bisa disimpan ke database                                                                                                                                                                                                      |    ✅   |
-| Mengirim pesan personal atau group                                                                                                                                                                                                                                                                                        |    ✅   |
-| Mengirim banyak pesan (broadcast)                                                                                                                                                                                                                                                                                         |    ✅   |
-| Mengirim pesan dengan gambar, audio, video, stiker, gif dan semua jenis dokumen                                                                                                                                                                                                                                           |    ✅   |
-| Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen via URL                                                                                                                                                                                                                                               |    ✅   |
-| Mengirim pesan dengan tipe `list`, `button` dan `CTA button`                                                                                                                                                                                                                                                              |    ✅   |
-| Bisa juga menambahkan gambar di pesan dengan tipe `button`                                                                                                                                                                                                                                                                |    ✅   |
-| ReplyMessage (quoted message)                                                                                                                                                                                                                                                                                             |    ✅   |
-| Mention user                                                                                                                                                                                                                                                                                                              |    ✅   |
-| Bisa menyimpan gambar, audio, video, semua jenis dokumen termasuk vcard dari pesan yang masuk                                                                                                                                                                                                                             |    ✅   |
-| Bisa juga mengirim dan membaca pesan dengan tipe `vcard`, `location`, `live location`                                                                                                                                                                                                                                     |    ✅   |
-| Bisa membuat group, menambahkan/menghapus member group (syaratnya nomor WA harus sebagai admin)                                                                                                                                                                                                                           |    ✅   |
-| Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya                                                                                                                                                                                                                                                       |    ✅   |
-| Bisa menghapus pesan yang ada di group                                                                                                                                                                                                                                                                                    |    ✅   |
-| Bisa mendapatkan nomor WA yang digunakan untuk scan QRCode                                                                                                                                                                                                                                                                |    ✅   |
-| Cek histori pesan berdasarkan nomor WA, jumlah pesan yang ditampilkan bisa diatur lewat parameter `limit`                                                                                                                                                                                                                 |    ✅   |
-| Subscribe event `ChangeState` untuk memonitoring perubahan status koneksi                                                                                                                                                                                                                                                 |    ✅   |
-| Subscribe event `OnUnreadMessage` untuk memonitoring pesan yang belum terbaca                                                                                                                                                                                                                                             |    ✅   |
-| Subscribe event `OnCreatedGroupStatus` untuk memonitoring status pembuatan group                                                                                                                                                                                                                                          |    ✅   |
-| Subscribe event `GroupJoin` untuk memonitoring user yang join ke group                                                                                                                                                                                                                                                    |    ✅   |
-| Subscribe event `GroupLeave` untuk memonitoring user keluar dari group                                                                                                                                                                                                                                                    |    ✅   |
-| Subscribe event `OnReceiveBusinessProfiles` untuk memonitoring hasil pengecekan profil bisnis                                                                                                                                                                                                                             |    ✅   |
-| Subscribe event `ReceiveMessage`, untuk memonitoring pesan masuk                                                                                                                                                                                                                                                          |    ✅   |
-| Subscribe event `ReceiveMessageStatus` untuk memonitoring status pesan yang dikirim berhasil atau gagal.                                                                                                                                                                                                                  |    ✅   |
-| Subscribe event `MessageAck` untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)                                                                                                                                                                                                         |    ✅   |
-| Tersedia fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.                                                                                                                                 |    ✅   |
-| Tersedia fitur untuk mengecek profil bisnis                                                                                                                                                                                                                                                                               |    ✅   |
-| Tersedia juga fitur `REST API`, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via `REST API` baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di [https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi](https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi) |    ✅   |
-| Archive chat (semua atau berdasarkan nomor WA)                                                                                                                                                                                                                                                                            |    ✅   |
-| Delete chat (semua atau berdasarkan nomor WA)                                                                                                                                                                                                                                                                             |    ✅   |
-| Pengesetan status online/offline                                                                                                                                                                                                                                                                                          |    ✅   |
-| Logout                                                                                                                                                                                                                                                                                                                    |    ✅   |
-| Bisa dengan mudah diintegrasikan dengan semua jenis database                                                                                                                                                                                                                                                              |    ✅   |
-
-## Melaporkan Bug atau Error
-
-Secara teknis dalam pengembangan sebuah aplikasi jelas tidak mungkin 100% bebas dari bug. Nah jika Anda menemukan bug atau error pada saat menggunakan library WhatsApp NET Client ini, silahkan Anda laporkan di halaman https://github.com/WhatsAppNETClient/WhatsAppNETClient2/issues
+| Features | Status |
+|------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ----------------|:------:|
+| Headless/no windows | ✅ |
+| Automatically saves login sessions (so scanning the WA qr code is enough) | ✅ |
+| Supports the use of [multi account WA](https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount), for example you can see at [https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount](https://github.com/WhatsAppNETClient /WhatsAppNETClientMultiAccount) | ✅ |
+| Grab contacts to read WA contacts so the results can be saved to database | ✅ |
+| Grab groups and members to read group data and its members so that the results can also be saved to database | ✅ |
+| Send personal or group messages | ✅ |
+| Send lots of messages (broadcast) | ✅ |
+| Send messages with images, audio, video, stickers, gifs and all types of documents | ✅ |
+| Send messages with images, audio, video, and all types of documents via URL | ✅ |
+| Send messages with the type `list`, `button` and `CTA button` | ✅ |
+| You can also add an image in the message with the type `button`
